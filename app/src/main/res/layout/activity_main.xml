@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/rojo">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="1"
+            android:padding="10dp">
+
+            <!-- Botón de retroceso -->
+            <ImageView
+                android:id="@+id/btn_back_login"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_column="0"
+                android:layout_row="0"
+                android:src="@drawable/ic_back_white"
+                android:layout_margin="16dp"/>
+
+            <!-- Título -->
+            <TextView
+                android:id="@+id/txt_titulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gestión de Contraseñas"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:layout_margin="16dp" />
+
+        </GridLayout>
+
+        <!-- CardView contenedor -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="6dp"
+            android:backgroundTint="@color/white">
+
+            <ListView
+                android:id="@+id/lista_pass"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="15dp"/>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <!-- Floating Button sobrepuesto -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnfl_agg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_input_add"
+        android:backgroundTint="@color/azul_oscuro"
+        android:layout_gravity="bottom|end"
+        app:backgroundTint="@color/white"
+        android:layout_margin="54dp"/>
+</FrameLayout>
